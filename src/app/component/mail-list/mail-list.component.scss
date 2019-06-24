@@ -1,0 +1,32 @@
+@import '../../../styles.scss';
+
+.main {
+
+    .button {
+        background-color:$mainColor ;
+        color:$sndColor ;
+        margin-top:20px;
+    }
+
+    .mailList {
+        margin: 30px auto;
+        width: 70vw;
+        //border: 2px solid $mainColor;
+    }
+
+    .selectMail{
+        margin: 20px auto;
+        width: 70vw;
+        color:$mainColor;
+        border: 2px solid $mainColor;
+        padding: 10px;
+        border-radius: 10%;
+
+    }
+    
+    .completedMail {
+        margin: 20px auto;
+        width: 70vw;
+        color:$mainColor;
+    }
+}

@@ -1,0 +1,101 @@
+<div class= "main">
+
+    <form [formGroup]='emailForm' 
+    (ngSubmit)='onSubmit()' 
+    class="form"
+    >
+
+    <h3 class="formTitle">SEND AN EMAIL</h3>
+
+    <div class="inputEmail sectionMail" >
+        <label for='input'>
+          Text : <br>
+          <textarea type='text' 
+          formControlName='input' 
+          name='input'
+          id='input'
+          class='textarea'>
+          </textarea>
+        </label>
+        <div *ngIf="emailForm.get('input').errors && emailForm.get('input').touched">
+            <span class='errorMessage'>Champ requis</span>
+        </div>
+    </div>
+
+    <div class="mail sectionMail" >
+        <label for='mail'>
+          mail : <br>
+          <input type='text' 
+          formControlName='mail' 
+          name='mail'
+          id='mail'
+          class='input'>
+        </label>
+        <div *ngIf="emailForm.get('mail').errors && emailForm.get('mail').touched">
+            <span class='errorMessage'>Champ requis</span>
+        </div>
+    </div>
+
+    <div class="date sectionMail" >
+        <label for='date'>
+          date : <br>
+          <input type='text' 
+          formControlName='date' 
+          name='date'
+          id='date'
+          class='input'
+          placeholder="12/05/2012">
+        </label>
+        <div *ngIf="emailForm.get('date').errors && emailForm.get('date').touched">
+            <span class='errorMessage'>Champ requis</span>
+        </div>
+    </div>
+
+    <div class="objet sectionMail" >
+        <label for='objet'>
+          Objet : <br>
+          <input type='text' 
+          formControlName='objet' 
+          name='objet'
+          id='objet'
+          class='input'>
+        </label>
+    </div>
+    <div *ngIf="emailForm.get('objet').errors && emailForm.get('objet').touched">
+        <span class='errorMessage'>Champ requis</span>
+    </div>
+
+    <div class="firstname sectionMail" >
+        <label for='firstname'>
+          Prenom : <br>
+          <input type='text' 
+          formControlName='firstname' 
+          name='firstname'
+          id='firstname'
+          class='input'>
+        </label>
+    </div>
+    <div *ngIf="emailForm.get('firstname').errors && emailForm.get('firstname').touched">
+        <span class='errorMessage'>Champ requis</span>
+    </div>
+
+    <div class="lastname sectionMail" >
+        <label for='lastname'>
+          Nom : <br>
+          <input type='text' 
+          formControlName='lastname' 
+          name='lastname'
+          id='lastname'
+          class='input'>
+        </label>
+    </div>
+    <div *ngIf="emailForm.get('lastname').errors && emailForm.get('lastname').touched">
+        <span class='errorMessage'>Champ requis</span>
+    </div>
+
+    <div class="send">
+        <button type="submit" [disabled]="!emailForm.valid" class="button">SEND</button>
+      </div>  
+
+    </form>
+ </div> 

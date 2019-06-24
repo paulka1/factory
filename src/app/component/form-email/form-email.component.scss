@@ -1,0 +1,33 @@
+@import '../../../styles.scss';
+
+.main {
+    background-color: $thirdColor;
+    color: $mainColor;
+    font-family: 'Merriweather', serif;
+    height: 100vh;    
+
+    .formTitle{
+        text-align: center;
+    }
+
+    .input{
+        border:3px solid $sndColor;
+    }
+    .textarea {
+        border:3px solid $sndColor;
+    }
+
+    .sectionMail {
+        width:70vw;
+        margin:20px auto;
+    }
+
+    .send{
+        text-align: center;
+    .button {
+        background-color:$mainColor ;
+        color:$sndColor ;
+        margin-top:20px;
+    }
+    }
+}

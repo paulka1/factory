@@ -1,0 +1,15 @@
+<div class="main">
+  <button (click)="requestMail()" class="button">Inbox Email</button>
+  <div class="mailList" *ngIf="request">
+    <div *ngFor="let mail of listMail ; index as i">
+      <div class="selectMail" (click)="showMail(i)">
+        <p><span>{{mail.firstname}}</span><span>{{mail.lastname}}</span></p>
+        <p>{{mail.objet}}</p>
+      </div>
+      <div class="completedMail" *ngIf="selectedMail === i">
+        <p>{{mail.input}}</p>
+        <p><span>{{mail.date}}</span><span>{{mail.mail}}</span></p>
+      </div>
+    </div>
+  </div>
+</div>
