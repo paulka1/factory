@@ -60,10 +60,10 @@
           id='objet'
           class='input'>
         </label>
-    </div>
-    <div *ngIf="emailForm.get('objet').errors && emailForm.get('objet').touched">
-        <span class='errorMessage'>Champ requis</span>
-    </div>
+      <div *ngIf="emailForm.get('objet').errors && emailForm.get('objet').touched">
+          <span class='errorMessage'>Champ requis</span>
+      </div>
+    </div>  
 
     <div class="firstname sectionMail" >
         <label for='firstname'>
@@ -74,9 +74,9 @@
           id='firstname'
           class='input'>
         </label>
-    </div>
-    <div *ngIf="emailForm.get('firstname').errors && emailForm.get('firstname').touched">
-        <span class='errorMessage'>Champ requis</span>
+      <div *ngIf="emailForm.get('firstname').errors && emailForm.get('firstname').touched">
+          <span class='errorMessage'>Champ requis</span>
+      </div>
     </div>
 
     <div class="lastname sectionMail" >
@@ -88,10 +88,10 @@
           id='lastname'
           class='input'>
         </label>
-    </div>
-    <div *ngIf="emailForm.get('lastname').errors && emailForm.get('lastname').touched">
-        <span class='errorMessage'>Champ requis</span>
-    </div>
+      <div *ngIf="emailForm.get('lastname').errors && emailForm.get('lastname').touched">
+          <span class='errorMessage'>Champ requis</span>
+      </div>
+    </div>  
 
     <div class="send">
         <button type="submit" [disabled]="!emailForm.valid" class="button">SEND</button>
